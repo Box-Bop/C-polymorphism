@@ -25,8 +25,37 @@ namespace ConsoleApp1
             circle1.Widht = 100;
             circle1.Height = 300;
 
-            circle1.Draw();
-            shape1.Draw();
+            var square1 = new Square();
+
+            square1.X = 420;
+            square1.Y = 420;
+            square1.Widht = 420;
+            square1.Height = 420;
+
+            var triangle1 = new Triangle();
+
+            triangle1.X = 25;
+            triangle1.Y = 26;
+            triangle1.Widht = 62;
+            triangle1.Height = 16;
+
+
+            //triangle1.Draw();
+            //circle1.Draw();
+            //shape1.Draw();
+            //square1.Draw();
+
+            var shapes = new List<Shape>();
+            shapes.Add(shape1);
+            shapes.Add(circle1);
+            shapes.Add(square1);
+            shapes.Add(triangle1);
+
+            foreach (var i in shapes)
+            {
+                i.Draw();
+            }
+
 
             Console.ReadLine();
         }
